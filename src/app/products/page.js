@@ -30,7 +30,7 @@ const brandData = {
   },
   mrsteam: {
     name: 'MR. STEAM',
-    description: 'State-of-the-art steam generators and systems that transform any bathroom into a personal spa.',
+    description: 'State-of-the-art steam generators and systems that transform any space into a personal spa.',
     thumbnail: '/images/brands/mrsteam/mrsteam-02.jpg',
     images: Array.from({ length: 21 }, (_, i) => {
       const n = String(i + 1).padStart(2, '0');

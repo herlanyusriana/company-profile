@@ -5,6 +5,6 @@ export const phoneDisplay = process.env.NEXT_PUBLIC_PHONE_DISPLAY || '+62 21 000
 export const whatsappNumber = rawWhatsAppNumber.replace(/\D/g, '');
 export const isWhatsAppConfigured = whatsappNumber.length >= 8;
 export const whatsappHref = isWhatsAppConfigured
-  ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Halo PT CJ Trading, saya ingin berkonsultasi mengenai kebutuhan bathroom.')}`
+  ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Halo PT CJ Trading, saya ingin berkonsultasi mengenai kebutuhan spa dan luxury living.')}`
   : '/contact';
 

@@ -24,7 +24,7 @@ export function SiteBrand({ light = false }) {
       <span className="grid size-9 place-items-center rounded-full border border-current/40 text-sm font-semibold tracking-[-0.08em]">CJ</span>
       <span className="text-[0.78rem] font-semibold uppercase leading-[0.85] tracking-[0.26em]">
         Trading<br />
-        <span className="text-[0.58rem] font-normal tracking-[0.19em] opacity-70">Bathroom Living</span>
+        <span className="text-[0.58rem] font-normal tracking-[0.19em] opacity-70">Luxury Living &amp; Spa</span>
       </span>
     </Link>
   );

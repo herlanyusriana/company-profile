@@ -29,7 +29,7 @@ const categories = [
   {
     title: 'MR. STEAM',
     eyebrow: 'Steam therapy at home',
-    description: 'State-of-the-art steam generators and systems that transform any bathroom into a personal spa.',
+    description: 'State-of-the-art steam generators and systems that transform any space into a personal spa.',
     image: '/images/brands/mrsteam/mrsteam-03.jpg',
     position: 'object-center',
   },

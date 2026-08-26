@@ -7,7 +7,7 @@ export default function SiteFooter() {
     <footer className="bg-[#050607] px-6 py-16 text-white sm:px-10 lg:px-16">
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-12 md:grid-cols-4">
-          <div className="md:col-span-2"><SiteBrand light /><p className="mt-6 max-w-sm text-sm leading-6 text-white/45">Premium bathroom products and project solutions for considered spaces across Indonesia.</p></div>
+          <div className="md:col-span-2"><SiteBrand light /><p className="mt-6 max-w-sm text-sm leading-6 text-white/45">Premium luxury living and spa solutions for considered spaces across Indonesia.</p></div>
           <div><p className="mb-4 text-xs uppercase tracking-[0.18em] text-white/40">Pages</p><div className="flex flex-col gap-3 text-sm"><Link href="/about">About Us</Link><Link href="/products">Products</Link><Link href="/project-references">Project References</Link></div></div>
           <div><p className="mb-4 text-xs uppercase tracking-[0.18em] text-white/40">Contact</p><div className="flex flex-col gap-3 text-sm text-white/70"><span>Jakarta, Indonesia</span><a href={whatsappHref} target="_blank" rel="noreferrer">{phoneDisplay}</a><a href={`mailto:${contactEmail}`}>{contactEmail}</a></div></div>
         </div>
