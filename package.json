@@ -9,13 +9,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@storyblok/react": "^5.4.22",
     "next": "16.1.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^5.15.8",
     "@tailwindcss/postcss": "^4.3.3",
     "eslint": "^9.39.5",
     "eslint-config-next": "16.1.6",
