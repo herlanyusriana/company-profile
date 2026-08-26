@@ -36,6 +36,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw source assets (filenames too long for git on Windows; web uses copies in public/)
+/assets/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel

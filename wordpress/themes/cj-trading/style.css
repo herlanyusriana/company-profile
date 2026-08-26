@@ -1,0 +1,48 @@
+/*
+Theme Name: CJ Trading Bathroom Living
+Theme URI: https://cjtrading.co.id/
+Author: PT CJ Trading
+Description: Bespoke cinematic company profile theme for PT CJ Trading.
+Version: 1.0.0
+Requires at least: 6.6
+Requires PHP: 8.0
+Text Domain: cj-trading
+*/
+
+:root {
+  --cj-font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --cj-font-heading: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--cj-font-body); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--cj-font-heading); }
+.cj-cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cj-menu-overlay { pointer-events: none; }
+.cj-menu-overlay .cj-menu-backdrop { opacity: 0; }
+.cj-menu-overlay .cj-menu-panel { transform: translateX(-100%); }
+.cj-menu-overlay.is-open { pointer-events: auto; }
+.cj-menu-overlay.is-open .cj-menu-backdrop { opacity: 1; }
+.cj-menu-overlay.is-open .cj-menu-panel { transform: translateX(0); }
+body.cj-menu-open { overflow: hidden; }
+.admin-bar .cj-site-header { top: 32px; }
+.admin-bar .cj-menu-panel { padding-top: calc(3rem + 32px); }
+.cj-content > * + * { margin-top: 1.25rem; }
+.cj-content a { text-decoration: underline; text-underline-offset: 0.2em; }
+.cj-contact-notice { margin-bottom: 1.5rem; border-radius: 0.75rem; padding: 1rem 1.25rem; }
+.cj-contact-notice.is-success { background: #ecfdf5; color: #065f46; }
+.cj-contact-notice.is-error { background: #fef2f2; color: #991b1b; }
+.cj-spec-section { padding-bottom: 2rem; }
+.cj-showroom-section { padding-top: 2rem; }
+@media (min-width: 1024px) {
+  .cj-spec-section { padding-bottom: 2.5rem; }
+  .cj-showroom-section { padding-top: 2.5rem; }
+}
+@media (max-width: 782px) {
+  .admin-bar .cj-site-header { top: 46px; }
+  .admin-bar .cj-menu-panel { padding-top: calc(1.75rem + 46px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cj-menu-overlay *, .catalog-card { transition-duration: 0.01ms !important; }
+}

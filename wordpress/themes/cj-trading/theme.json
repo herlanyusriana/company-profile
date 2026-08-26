@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": { "contentSize": "760px", "wideSize": "1440px" },
+    "color": {
+      "palette": [
+        { "slug": "ink", "name": "CJ Ink", "color": "#010205" },
+        { "slug": "paper", "name": "CJ Paper", "color": "#ffffff" },
+        { "slug": "warm", "name": "CJ Warm", "color": "#f2f1ee" },
+        { "slug": "muted", "name": "CJ Muted", "color": "#71717a" }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        { "slug": "cj-sans", "name": "CJ Sans", "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" },
+        { "slug": "cj-serif", "name": "CJ Serif", "fontFamily": "Georgia, 'Times New Roman', serif" }
+      ],
+      "fontSizes": [
+        { "slug": "small", "name": "Small", "size": "0.875rem" },
+        { "slug": "body", "name": "Body", "size": "1rem" },
+        { "slug": "lead", "name": "Lead", "size": "1.25rem" },
+        { "slug": "heading", "name": "Heading", "size": "clamp(2.5rem, 6vw, 6rem)" }
+      ]
+    },
+    "spacing": { "units": ["px", "rem", "em", "%", "vw", "vh"] }
+  },
+  "styles": {
+    "color": { "background": "#ffffff", "text": "#18181b" },
+    "typography": { "fontFamily": "var(--wp--preset--font-family--cj-sans)", "lineHeight": "1.5" }
+  }
+}
+

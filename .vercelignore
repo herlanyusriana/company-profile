@@ -1,0 +1,7 @@
+.next/
+wordpress/
+.env
+.env.*
+!.env.example
+cj-mobile-collections.png
+npm-debug.log*
