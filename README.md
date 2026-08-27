@@ -42,7 +42,7 @@ The site is configured for **static export** (`output: 'export'` in `next.config
    ```
 2. Set the contact form recipient email in `public/mail.php` (line ~49):
    ```php
-   $to = 'hello@cjtrading.co.id'; // ← Ganti email tujuan di sini
+   $to = 'cjsales@cbn.net.id'; // ← Ganti email tujuan di sini
    ```
 3. Upload the **contents of `out/`** to your cPanel `public_html/` directory (FTP / File Manager).
 4. `public/.htaccess` is included in the export — it handles:
@@ -83,4 +83,4 @@ Contact details are driven by env vars (see `.env.example`):
 ## ⚠️ Notes
 
 - `/assets/` (raw source assets) is git-ignored — filenames exceed Windows/ git path limits. The web uses copies under `public/images/`.
-- Brand images and videos total ~375 MB in the export; ensure your cPanel plan has enough disk quota.
+- Brand images and videos total ~55 MB in the export (images ~37 MB, videos ~18 MB) after in-place compression; ensure your cPanel plan has enough disk quota.

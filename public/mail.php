@@ -46,7 +46,7 @@ if (!$name || !preg_match($emailPattern, $email) || !$message) {
     exit;
 }
 
-$to      = 'hello@cjtrading.co.id'; // ← Ganti email tujuan di sini
+$to      = 'cjsales@cbn.net.id'; // ← Ganti email tujuan di sini (sinkronkan dengan CONTACT_TO_EMAIL di .env)
 $subject = "Website inquiry from {$name}" . ($company ? " — {$company}" : "");
 
 $headers  = "From: CJ Trading Website <noreply@cjtrading.co.id>\r\n";

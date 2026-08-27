@@ -57,6 +57,11 @@ wordpress/
 # --- raw source assets (too long for git on Windows; web uses copies in public/) ---
 /assets/
 
+# --- local backups (noise; kept on disk only) ---
+/out_old/
+/out.zip
+/.backup/
+
 # --- TypeScript ---
 *.tsbuildinfo
 next-env.d.ts

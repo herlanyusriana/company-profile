@@ -6,9 +6,9 @@ import { useEffect, useState } from 'react';
 import { contactEmail, phoneDisplay, whatsappHref } from '@/lib/contact';
 
 const heroVideos = [
-  '/videos/dornbracht.mp4',
-  '/videos/viega.mp4',
-  '/videos/ciclotte.mp4',
+  { src: '/videos/dornbracht.mp4', poster: '/hero-poster-dornbracht.jpg' },
+  { src: '/videos/viega.mp4', poster: '/hero-poster-viega.jpg' },
+  { src: '/videos/ciclotte.mp4', poster: '/hero-poster-ciclotte.jpg' },
 ];
 
 const categories = [
@@ -145,6 +145,7 @@ export default function CompanyHome() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const nextVideo = () => setCurrentVideoIndex((prev) => (prev + 1) % heroVideos.length);
+  const currentVideo = heroVideos[currentVideoIndex];
 
   useEffect(() => {
     const elements = document.querySelectorAll('[data-catalog-reveal], [data-scroll-reveal]');
@@ -226,11 +227,13 @@ export default function CompanyHome() {
     <main id="top" className="overflow-hidden bg-white text-zinc-950">
       <section data-scroll-hero className="relative min-h-[760px] h-[100svh] overflow-hidden bg-zinc-950 text-white">
         <video
-          key={heroVideos[currentVideoIndex]}
-          src={heroVideos[currentVideoIndex]}
+          key={currentVideo.src}
+          src={currentVideo.src}
+          poster={currentVideo.poster}
           autoPlay
           muted
           playsInline
+          preload="none"
           onEnded={nextVideo}
           className="scroll-hero-media absolute inset-0 h-full w-full object-cover"
           data-scroll-hero-media
