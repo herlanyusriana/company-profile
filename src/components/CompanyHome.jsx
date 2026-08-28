@@ -452,6 +452,8 @@ export default function CompanyHome() {
             display: flex;
             animation: marquee 40s linear infinite;
             width: max-content;
+            user-select: none;
+            -webkit-user-select: none;
           }
           .marquee-item {
             display: flex;
@@ -470,8 +472,8 @@ export default function CompanyHome() {
           <div className="relative overflow-hidden">
             <div className="marquee-track">
               {partnerLogos.concat(partnerLogos).map(([src, alt], idx) => (
-                <div key={`${alt}-${idx}`} className="marquee-item">
-                  <img src={src} alt={alt} className="max-h-12 w-auto object-contain sm:max-h-16 brightness-0 invert transition duration-300 hover:brightness-100 hover:invert-0" />
+                <div key={`${alt}-${idx}`} className="marquee-item select-none">
+                  <img src={src} alt={alt} draggable={false} className="max-h-12 w-auto object-contain sm:max-h-16 brightness-0 invert transition duration-300 hover:brightness-100 hover:invert-0" />
                 </div>
               ))}
             </div>
