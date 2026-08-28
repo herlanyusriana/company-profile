@@ -282,7 +282,6 @@ export default function CompanyHome() {
 
         <div data-scroll-hero-content className="scroll-hero-content relative z-10 flex h-full max-w-[1720px] items-end px-6 pb-14 sm:px-10 sm:pb-20 lg:px-24 lg:pb-24">
           <div className="max-w-4xl">
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">PT CJ Trading · Luxury Living & Spa Solutions</p>
             <h1 className="max-w-3xl text-[clamp(3.7rem,8vw,8.8rem)] font-light leading-[0.84] tracking-[-0.065em]">
               Living.<br />Elevated.
             </h1>
