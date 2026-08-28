@@ -106,6 +106,21 @@ const discoveries = [
   },
 ];
 
+const partnerLogos = [
+  ['/images/logos/harvia_logo_b&w_trpn.png', 'HARVIA'],
+  ['/images/logos/logo_jee-o_trpn.png', 'JEE-O'],
+  ['/images/logos/mr.steam_b&w.png', 'MR. STEAM'],
+  ['/images/logos/planika_b&w.png', 'PLANIKA'],
+  ['/images/logos/safyooz_logo_b&w.png', 'SAFYOOZ'],
+  ['/images/logos/takara_belmont_logo_trpn.png', 'TAKARA BELMONT'],
+  ['/images/logos/viega_logo_hitam_putih.jpg', 'VIEGA'],
+  ['/images/logos/dornbracht_new-tprn.png', 'DORNBRACHT'],
+  ['/images/logos/corian_logo_b&w.png', 'CORIAN'],
+  ['/images/logos/aquatica_logo_htm_trpn.png', 'AQUATICA'],
+  ['/images/logos/ciclotte_logo_trpn.png', 'CICLOTTE'],
+  ['/images/logos/alape-logo-tranparant.png', 'ALAPE'],
+];
+
 function ArrowIcon({ className = '' }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -427,29 +442,39 @@ export default function CompanyHome() {
         </div>
       </section>
 
-      <section className="bg-[#f5f5f2] px-5 py-24 sm:px-8 lg:px-14 lg:py-28">
+      <section className="bg-[#0a0a0a] px-5 py-24 sm:px-8 lg:px-14 lg:py-28 overflow-hidden">
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .marquee-track {
+            display: flex;
+            animation: marquee 40s linear infinite;
+            width: max-content;
+          }
+          .marquee-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 3rem;
+          }
+          .marquee-track:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
         <div className="mx-auto max-w-[1440px]">
-          <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">Our partners</p>
-          <h2 className="mb-14 text-center text-4xl font-medium tracking-[-0.045em] sm:text-5xl">Trusted brands we carry.</h2>
-          <div className="grid grid-cols-3 items-center gap-8 sm:grid-cols-4 md:grid-cols-6 lg:gap-12">
-            {[
-              ['/images/logos/harvia_logo_b&w_trpn.png', 'HARVIA'],
-              ['/images/logos/logo_jee-o_trpn.png', 'JEE-O'],
-              ['/images/logos/mr.steam_b&w.png', 'MR. STEAM'],
-              ['/images/logos/planika_b&w.png', 'PLANIKA'],
-              ['/images/logos/safyooz_logo_b&w.png', 'SAFYOOZ'],
-              ['/images/logos/takara_belmont_logo_trpn.png', 'TAKARA BELMONT'],
-              ['/images/logos/viega_logo_hitam_putih.jpg', 'VIEGA'],
-              ['/images/logos/dornbracht_new-tprn.png', 'DORNBRACHT'],
-              ['/images/logos/corian_logo_b&w.png', 'CORIAN'],
-              ['/images/logos/aquatica_logo_htm_trpn.png', 'AQUATICA'],
-              ['/images/logos/ciclotte_logo_trpn.png', 'CICLOTTE'],
-              ['/images/logos/alape-logo-tranparant.png', 'ALAPE'],
-            ].map(([src, alt]) => (
-              <div key={alt} className="flex items-center justify-center grayscale opacity-60 transition duration-300 hover:opacity-100 hover:grayscale-0">
-                <img src={src} alt={alt} className="max-h-12 w-auto object-contain sm:max-h-16" />
-              </div>
-            ))}
+          <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/60">Our partners</p>
+          <h2 className="mb-14 text-center text-4xl font-medium tracking-[-0.045em] sm:text-5xl text-white">Trusted brands we carry.</h2>
+          <div className="relative overflow-hidden">
+            <div className="marquee-track">
+              {partnerLogos.concat(partnerLogos).map(([src, alt], idx) => (
+                <div key={`${alt}-${idx}`} className="marquee-item">
+                  <img src={src} alt={alt} className="max-h-12 w-auto object-contain sm:max-h-16 brightness-0 invert transition duration-300 hover:brightness-100 hover:invert-0" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
