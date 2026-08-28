@@ -131,12 +131,15 @@ function ArrowIcon({ className = '' }) {
 
 function BrandMark({ light = false }) {
   return (
-    <a href="#top" className={`inline-flex items-center gap-3 ${light ? 'text-white' : 'text-black'}`} aria-label="CJ Trading home">
-      <span className="grid size-9 place-items-center rounded-full border border-current/40 text-sm font-semibold tracking-[-0.08em]">CJ</span>
-      <span className="text-[0.78rem] font-semibold uppercase leading-[0.85] tracking-[0.26em]">
-        Trading<br />
-        <span className="text-[0.58rem] font-normal tracking-[0.19em] opacity-70">Luxury Living</span>
-      </span>
+    <a href="#top" className="inline-flex items-center" aria-label="CJ Trading home">
+      <Image
+        src="/LOGO_CJ.png"
+        alt="CJ Trading"
+        width={594}
+        height={420}
+        priority
+        className={`h-10 w-auto object-contain sm:h-12 ${light ? 'brightness-0 invert' : ''}`}
+      />
     </a>
   );
 }
