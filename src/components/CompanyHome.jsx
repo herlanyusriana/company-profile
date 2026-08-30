@@ -111,12 +111,12 @@ const partnerLogos = [
   ['/images/logos/logo_jee-o_trpn.png', 'JEE-O'],
   ['/images/logos/mr.steam_b&w.png', 'MR. STEAM'],
   ['/images/logos/planika_b&w.png', 'PLANIKA'],
-  ['/images/logos/safyooz_logo_b&w.png', 'SAFYOOZ'],
-  ['/images/logos/takara_belmont_logo_trpn.png', 'TAKARA BELMONT'],
+  ['/images/logos/safyooz_logo_b&w.png', 'SAFYOOZ', false, true],
+  ['/images/logos/takara_belmont_logo_trpn.png', 'TAKARA BELMONT', false, true],
   ['/images/logos/viega_logo_trpn.png', 'VIEGA', true],
   ['/images/logos/dornbracht_new-tprn.png', 'DORNBRACHT'],
   ['/images/logos/corian_logo_b&w.png', 'CORIAN'],
-  ['/images/logos/aquatica_logo_htm_trpn.png', 'AQUATICA'],
+  ['/images/logos/aquatica_logo_htm_trpn.png', 'AQUATICA', false, true],
   ['/images/logos/ciclotte_logo_trpn.png', 'CICLOTTE'],
   ['/images/logos/alape-logo-tranparant.png', 'ALAPE'],
 ];
@@ -473,9 +473,9 @@ export default function CompanyHome() {
           <h2 className="mb-14 text-center text-4xl font-medium tracking-[-0.045em] sm:text-5xl text-white">Trusted brands we carry.</h2>
           <div className="relative overflow-hidden">
             <div className="marquee-track">
-              {partnerLogos.concat(partnerLogos).map(([src, alt, plain], idx) => (
+              {partnerLogos.concat(partnerLogos).map(([src, alt, plain, tall], idx) => (
                 <div key={`${alt}-${idx}`} className="marquee-item select-none">
-                  <img src={src} alt={alt} draggable={false} className={`h-12 w-36 object-contain sm:h-16 sm:w-44 ${plain ? '' : 'brightness-0 invert'}`} />
+                  <img src={src} alt={alt} draggable={false} className={`${tall ? 'h-16 w-36 sm:h-24 sm:w-48' : 'h-12 w-36 sm:h-16 sm:w-44'} object-contain ${plain ? '' : 'brightness-0 invert'}`} />
                 </div>
               ))}
             </div>
