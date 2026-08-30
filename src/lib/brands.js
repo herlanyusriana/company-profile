@@ -43,7 +43,7 @@ export const brandData = {
     name: 'MR. STEAM',
     slug: 'mrsteam',
     description: 'State-of-the-art steam generators and systems that transform any space into a personal spa.',
-    thumbnail: '/images/brands/mrsteam/mrsteam-02.jpg',
+    thumbnail: '/images/brands/mrsteam/mrsteam-07.jpg',
     images: Array.from({ length: 21 }, (_, i) => {
       const n = String(i + 1).padStart(2, '0');
       if (n === '12') return `/images/brands/mrsteam/mrsteam-${n}.jfif`;
@@ -93,7 +93,7 @@ export const brandData = {
     name: 'TAKARA BELMONT',
     slug: 'takarabelmont',
     description: 'Professional salon furniture and spa equipment designed for comfort and style.',
-    thumbnail: '/images/brands/takarabelmont/takarabelmont-02.jpg',
+    thumbnail: '/images/brands/takarabelmont/takarabelmont-25.jpg',
     images: Array.from({ length: 36 }, (_, i) => {
       const n = String(i + 1).padStart(2, '0');
       return `/images/brands/takarabelmont/takarabelmont-${n}.jpg`;
