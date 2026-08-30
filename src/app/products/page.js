@@ -19,7 +19,7 @@ export default function ProductsPage() {
     <main className="bg-white text-zinc-950">
       <section className="relative flex min-h-[620px] items-end overflow-hidden bg-black px-6 pb-20 text-white sm:px-10 lg:px-20">
         <SiteHeader />
-        <Image src="/images/brands/harvia/harvia-02.jpg" alt="CJ Trading product collections" fill priority sizes="100vw" className="object-cover object-[65%_center]" />
+        <Image src="/images/brands/dornbracht/dornbracht-09.jpg" alt="CJ Trading product collections" fill priority sizes="100vw" className="object-cover object-[65%_center]" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/30 to-transparent" />
         <div className="relative z-10">
           <p className="mb-5 text-xs uppercase tracking-[0.28em] text-white/60">Product portfolio</p>

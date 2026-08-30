@@ -7,7 +7,7 @@ export const brandData = {
     name: 'HARVIA Sauna',
     slug: 'harvia',
     description: 'Premium sauna heaters, steam generators, and accessories for the ultimate wellness retreat.',
-    thumbnail: '/images/brands/harvia/harvia-03.jpg',
+    thumbnail: '/images/brands/harvia/harvia-10.jpg',
     images: Array.from({ length: 22 }, (_, i) => {
       const n = String(i + 1).padStart(2, '0');
       if (n === '04') return null;

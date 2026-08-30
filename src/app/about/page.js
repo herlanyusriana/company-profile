@@ -9,7 +9,7 @@ export default function AboutPage() {
     <main className="bg-white text-zinc-950">
       <section className="relative flex min-h-[760px] items-end overflow-hidden bg-black px-6 pb-20 text-white sm:px-10 lg:px-20 lg:pb-24">
         <SiteHeader />
-        <Image src="/images/brands/harvia/harvia-01.jpg" alt="CJ Trading luxury living showroom" fill priority sizes="100vw" className="object-cover" />
+        <Image src="/images/brands/harvia/harvia-11.jpg" alt="CJ Trading luxury living showroom" fill priority sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/35 to-black/10" />
         <div className="relative z-10 max-w-5xl"><p className="mb-6 text-xs uppercase tracking-[0.28em] text-white/60">About PT CJ Trading</p><h1 className="text-[clamp(4rem,9vw,9rem)] font-light leading-[0.85] tracking-[-0.065em]">Built around<br />better living.</h1></div>
       </section>
