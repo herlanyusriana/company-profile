@@ -18,6 +18,7 @@ const categories = [
     description: 'Premium sauna heaters, steam generators, and accessories for the ultimate wellness retreat.',
     image: '/images/brands/harvia/harvia-02.jpg',
     position: 'object-center',
+    href: '/products/harvia',
   },
   {
     title: 'JEE-O Showers',
@@ -25,6 +26,7 @@ const categories = [
     description: 'Minimalist, all-weather outdoor showers that blend design with nature.',
     image: '/images/brands/jeeo/jeeo-03.jpg',
     position: 'object-center',
+    href: '/products/jeeo',
   },
   {
     title: 'MR. STEAM',
@@ -32,6 +34,7 @@ const categories = [
     description: 'State-of-the-art steam generators and systems that transform any space into a personal spa.',
     image: '/images/brands/mrsteam/mrsteam-03.jpg',
     position: 'object-center',
+    href: '/products/mrsteam',
   },
   {
     title: 'PLANIKA Fireplaces',
@@ -39,6 +42,7 @@ const categories = [
     description: 'Eco-friendly, ventless fireplaces that create warmth and ambiance in any space.',
     image: '/images/brands/planika/planika-04.jpg',
     position: 'object-center',
+    href: '/products/planika',
   },
   {
     title: 'SAFYOOZ Bathware',
@@ -46,6 +50,7 @@ const categories = [
     description: 'Artisanal bathtubs, basins, and vanities made from natural stone composites.',
     image: '/images/brands/safyooz/safyooz-03.jpg',
     position: 'object-center',
+    href: '/products/safyooz',
   },
   {
     title: 'TAKARA BELMONT',
@@ -53,6 +58,7 @@ const categories = [
     description: 'Professional salon furniture and spa equipment designed for comfort and style.',
     image: '/images/brands/takarabelmont/takarabelmont-04.jpg',
     position: 'object-center',
+    href: '/products/takarabelmont',
   },
   {
     title: 'VIEGA Drainage',
@@ -60,6 +66,7 @@ const categories = [
     description: 'High-quality floor drains and shower channels for flawless wet room designs.',
     image: '/images/brands/viega/viega-02.png',
     position: 'object-center',
+    href: '/products/viega',
   },
   {
     title: 'Wellness Spaces',
@@ -67,6 +74,47 @@ const categories = [
     description: 'Combining sauna, steam, and fireplace elements into a cohesive living experience.',
     image: '/images/brands/harvia/harvia-05.jpg',
     position: 'object-center',
+    href: '/products/wellness',
+  },
+  {
+    title: 'ALAPE',
+    eyebrow: 'German-engineered glazed steel washplaces',
+    description: 'Glazed steel washplaces and basins with character — crafted in Germany since 1896.',
+    image: '/images/brands/alape/alape-01.jpg',
+    position: 'object-center',
+    href: '/products/alape',
+  },
+  {
+    title: 'AQUATICA',
+    eyebrow: 'Sculptural freestanding bathtubs and spas',
+    description: 'Sculptural freestanding bathtubs and spas crafted for the art of deep relaxation.',
+    image: '/images/brands/aquatica/aquatica-01.jpg',
+    position: 'object-center',
+    href: '/products/aquatica',
+  },
+  {
+    title: 'CICLOTTE',
+    eyebrow: 'Italian design exercise bikes and dumbbells',
+    description: 'The iconic Italian design exercise bike and modular dumbbells that turn fitness into art.',
+    image: '/images/brands/ciclotte/ciclotte-01.jpg',
+    position: 'object-center',
+    href: '/products/ciclotte',
+  },
+  {
+    title: 'CORIAN',
+    eyebrow: 'Solid surface for architecture and design',
+    description: 'Corian® solid surface — a seamless, durable material for architecture, washbasins, and expressive design.',
+    image: '/images/brands/corian/corian-01.jpg',
+    position: 'object-center',
+    href: '/products/corian',
+  },
+  {
+    title: 'DORNBRACHT',
+    eyebrow: 'German-engineered fittings and showers',
+    description: 'Dornbracht — German-engineered fittings and showers for the luxury bathroom.',
+    image: '/images/brands/dornbracht/dornbracht-01.jpg',
+    position: 'object-center',
+    href: '/products/dornbracht',
   },
 ];
 
@@ -345,7 +393,7 @@ export default function CompanyHome() {
                 {categories.slice(rowIndex * 2, rowIndex * 2 + 2).map((item) => (
                   <Link
                     key={item.title}
-                    href="/contact"
+                    href={item.href}
                     className="catalog-card group relative h-[620px] overflow-hidden rounded-[1.75rem] bg-zinc-900 text-white sm:h-[700px] lg:h-[720px]"
                   >
                     <Image src={item.image} alt={item.title} fill sizes="(max-width: 1024px) 100vw, 60vw" className={`object-cover ${item.position}`} />
