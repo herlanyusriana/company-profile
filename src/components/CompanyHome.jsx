@@ -475,7 +475,7 @@ export default function CompanyHome() {
             <div className="marquee-track">
               {partnerLogos.concat(partnerLogos).map(([src, alt, plain, tall], idx) => (
                 <div key={`${alt}-${idx}`} className="marquee-item select-none">
-                  <img src={src} alt={alt} draggable={false} className={`${tall ? 'h-16 w-36 sm:h-24 sm:w-48' : 'h-12 w-36 sm:h-16 sm:w-44'} object-contain ${plain ? '' : 'brightness-0 invert'}`} />
+                  <img src={src} alt={alt} draggable={false} className={`${tall ? 'h-10 w-auto sm:h-16' : 'h-12 w-36 object-contain sm:h-16 sm:w-44'} ${plain ? '' : 'brightness-0 invert'}`} />
                 </div>
               ))}
             </div>
