@@ -21,6 +21,45 @@ function ChevronRight({ className = '' }) {
   );
 }
 
+function LinesSection({ lines, name }) {
+  return (
+    <section className="px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
+      <div className="mx-auto max-w-[1400px]">
+        <div className="mb-14 max-w-3xl">
+          <p className="mb-3 text-xs uppercase tracking-[0.28em] text-zinc-400">Product lines</p>
+          <h2 className="text-4xl font-medium tracking-[-0.045em] sm:text-6xl">The {name} range.</h2>
+          <p className="mt-6 text-lg leading-7 text-zinc-600">
+            Explore the product lines that define {name} — each crafted to elevate the wellness and living experience.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {lines.map((line) => (
+            <article
+              key={line.name}
+              className="group relative aspect-[16/10] overflow-hidden rounded-[1.75rem] bg-zinc-200"
+            >
+              <Image
+                src={line.src}
+                alt={line.name}
+                fill
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-8 text-white">
+                <h3 className="text-2xl font-medium tracking-[-0.02em]">{line.name}</h3>
+                <p className="mt-2 max-w-md text-sm leading-6 text-white/75">{line.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function BrandView({ brand }) {
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
@@ -75,6 +114,9 @@ export default function BrandView({ brand }) {
           <p className="mt-7 max-w-xl text-lg leading-7 text-white/70">{brand.description}</p>
         </div>
       </section>
+
+      {/* Product lines */}
+      {brand.lines?.length > 0 && <LinesSection lines={brand.lines} name={brand.name} />}
 
       {/* Gallery */}
       <section className="px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
