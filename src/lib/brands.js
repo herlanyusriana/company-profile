@@ -1,0 +1,106 @@
+export const brandData = {
+  harvia: {
+    name: 'HARVIA Sauna',
+    slug: 'harvia',
+    description: 'Premium sauna heaters, steam generators, and accessories for the ultimate wellness retreat.',
+    thumbnail: '/images/brands/harvia/harvia-03.jpg',
+    images: Array.from({ length: 22 }, (_, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      if (n === '04') return null;
+      if (n === '13') return `/images/brands/harvia/harvia-${n}.png`;
+      if (n === '21' || n === '22') return `/images/brands/harvia/harvia-${n}.jfif`;
+      return `/images/brands/harvia/harvia-${n}.jpg`;
+    }).filter(Boolean),
+  },
+  jeeo: {
+    name: 'JEE-O Showers',
+    slug: 'jeeo',
+    description: 'Minimalist, all-weather outdoor showers that blend design with nature.',
+    thumbnail: '/images/brands/jeeo/jeeo-02.jpg',
+    images: Array.from({ length: 13 }, (_, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      if (['05', '08', '12'].includes(n)) return `/images/brands/jeeo/jeeo-${n}.jfif`;
+      return `/images/brands/jeeo/jeeo-${n}.jpg`;
+    }),
+  },
+  mrsteam: {
+    name: 'MR. STEAM',
+    slug: 'mrsteam',
+    description: 'State-of-the-art steam generators and systems that transform any space into a personal spa.',
+    thumbnail: '/images/brands/mrsteam/mrsteam-02.jpg',
+    images: Array.from({ length: 21 }, (_, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      if (n === '12') return `/images/brands/mrsteam/mrsteam-${n}.jfif`;
+      return `/images/brands/mrsteam/mrsteam-${n}.jpg`;
+    }),
+  },
+  planika: {
+    name: 'PLANIKA Fireplaces',
+    slug: 'planika',
+    description: 'Eco-friendly, ventless fireplaces that create warmth and ambiance in any space.',
+    thumbnail: '/images/brands/planika/planika-03.jpg',
+    images: Array.from({ length: 32 }, (_, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      if (n === '02') return `/images/brands/planika/planika-${n}.png`;
+      return `/images/brands/planika/planika-${n}.jpg`;
+    }),
+  },
+  safyooz: {
+    name: 'SAFYOOZ Bathware',
+    slug: 'safyooz',
+    description: 'Artisanal bathtubs, basins, and vanities made from natural stone composites.',
+    thumbnail: '/images/brands/safyooz/safyooz-02.jpg',
+    images: Array.from({ length: 17 }, (_, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      if (i < 7) return `/images/brands/safyooz/safyooz-${n}.jpg`;
+      return `/images/brands/safyooz/safyooz-${n}.png`;
+    }),
+  },
+  takarabelmont: {
+    name: 'TAKARA BELMONT',
+    slug: 'takarabelmont',
+    description: 'Professional salon furniture and spa equipment designed for comfort and style.',
+    thumbnail: '/images/brands/takarabelmont/takarabelmont-02.jpg',
+    images: Array.from({ length: 36 }, (_, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      return `/images/brands/takarabelmont/takarabelmont-${n}.jpg`;
+    }),
+  },
+  viega: {
+    name: 'VIEGA Drainage',
+    slug: 'viega',
+    description: 'High-quality floor drains and shower channels for flawless wet room designs.',
+    thumbnail: '/images/brands/viega/viega-03.jpg',
+    images: Array.from({ length: 12 }, (_, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      if (['02', '04', '05', '12'].includes(n)) return `/images/brands/viega/viega-${n}.png`;
+      return `/images/brands/viega/viega-${n}.jpg`;
+    }),
+  },
+  wellness: {
+    name: 'Wellness Spaces',
+    slug: 'wellness',
+    description: 'Integrated wellness environments combining sauna, steam, and fireplace elements.',
+    thumbnail: '/images/brands/harvia/harvia-05.jpg',
+    images: [
+      '/images/brands/harvia/harvia-05.jpg',
+      '/images/brands/harvia/harvia-06.jpg',
+      '/images/brands/harvia/harvia-07.jpg',
+      '/images/brands/harvia/harvia-08.jpg',
+      '/images/brands/mrsteam/mrsteam-01.jpg',
+      '/images/brands/mrsteam/mrsteam-05.jpg',
+      '/images/brands/planika/planika-01.jpg',
+      '/images/brands/planika/planika-04.jpg',
+    ],
+  },
+};
+
+export const cardOrder = ['harvia', 'jeeo', 'mrsteam', 'planika', 'safyooz', 'takarabelmont', 'viega', 'wellness'];
+
+export function getBrand(slug) {
+  return brandData[slug] ?? null;
+}
+
+export function getAllBrandSlugs() {
+  return cardOrder;
+}
